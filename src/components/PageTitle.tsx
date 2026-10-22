@@ -11,10 +11,10 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   const locale = cfg?.locale ?? "en-US";
   const title = cfg?.pageTitle ?? i18n(locale).propertyDefaults.title;
   const baseDir = pathToRoot(fileData.slug as string);
-  const avatar = "/static/avatar.webp";
+  const avatar = "/static/icon.webp";
   return (
     <h2 class={classNames(displayClass, "page-title")}>
-      <img src={avatar} alt="JoubaMety's Avatar"></img>
+      <img src={avatar} alt="JoubaMety's Notes Icon"></img>
       <a href={baseDir}>{title}</a>
     </h2>
   );
