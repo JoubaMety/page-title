@@ -11,8 +11,10 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   const locale = cfg?.locale ?? "en-US";
   const title = cfg?.pageTitle ?? i18n(locale).propertyDefaults.title;
   const baseDir = pathToRoot(fileData.slug as string);
+  const avatar = "/static/avatar.webp";
   return (
     <h2 class={classNames(displayClass, "page-title")}>
+      <img src={avatar} alt="JoubaMety's Avatar"></img>
       <a href={baseDir}>{title}</a>
     </h2>
   );
@@ -23,6 +25,13 @@ PageTitle.css = `
   font-size: 1.75rem;
   margin: 0;
   font-family: var(--titleFont);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.page-title img {
+  height: 3rem;
 }
 `;
 
