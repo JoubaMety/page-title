@@ -14,14 +14,16 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   const avatar = "/static/icon.webp";
   return (
     <h2 class={classNames(displayClass, "page-title")}>
-      <img src={avatar} alt="JoubaMety's Notes Icon"></img>
-      <a href={baseDir}>{title}</a>
+      <a href={baseDir}>
+        <img src={avatar} alt="JoubaMety's Notes Icon"></img>
+        {title}
+      </a>
     </h2>
   );
 };
 
 PageTitle.css = `
-.page-title {
+.page-title a {
   font-size: 1.75rem;
   margin: 0;
   font-family: var(--titleFont);
@@ -30,7 +32,7 @@ PageTitle.css = `
   align-items: center;
 }
 
-.page-title img {
+.page-title a img {
   height: 3rem;
 }
 `;
