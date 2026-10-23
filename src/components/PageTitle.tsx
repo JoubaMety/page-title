@@ -40,6 +40,11 @@ PageTitle.css = `
   height: 3rem;
 }
 
+.page-title a:hover img {
+    filter: brightness(1.1);
+    transition: filter var(--expressive-fast-effects);
+}
+
 @media (max-width: 800px) {
   .page-title a {
     display: unset;
